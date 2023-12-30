@@ -101,7 +101,6 @@ export class AppComponent {
   // Select similar inputs
   selectSimilar(index: number, type: string) {
     if (this.canSelect) {
-      this.inspectionActivated = true;
       if (type == 'input') {
         this.currentSelect = 'input';
         if (this.customSelect) {
@@ -184,5 +183,7 @@ export class AppComponent {
     this.tasksInput.forEach((e, i) => {
       e.value = 'New Task ' + (i + 1);
     });
+
+    this.inspectionActivated = false;
   }
 }
