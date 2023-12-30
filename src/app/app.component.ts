@@ -168,21 +168,9 @@ export class AppComponent {
     if (type == 'button') {
       this.blurInputs = true;
       this.blurTasks = false;
-      this.inputField.forEach((elem) => {
-        elem.nativeElement.classList.remove('similar-elements');
-      });
-      this.tasksInput.forEach((e) => {
-        e.isSelected = false;
-      });
     } else {
       this.blurInputs = false;
       this.blurTasks = true;
-      this.tasksQuery.forEach((elem) => {
-        elem.nativeElement.classList.remove('similar-elements');
-      });
-      this.tasks.forEach((e) => {
-        e.isSelected = false;
-      });
     }
   }
 
